@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4033905 */
+  src: url('iconfont.woff2?t=1685328456455') format('woff2'),
+       url('iconfont.woff?t=1685328456455') format('woff'),
+       url('iconfont.ttf?t=1685328456455') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-clear:before {
+  content: "\e648";
+}
+
+.icon-wechat-line:before {
+  content: "\e6a1";
+}
+
+.icon-pause:before {
+  content: "\e619";
+}
+
+.icon-play:before {
+  content: "\e601";
+}
+
+.icon-exit:before {
+  content: "\e600";
+}
+
+.icon-wechat:before {
+  content: "\e621";
+}
+
+.icon-kefu:before {
+  content: "\e741";
+}
+
+.icon-business-cooperation:before {
+  content: "\e6b0";
+}
+
+.icon-right:before {
+  content: "\e60f";
+}
+
+.icon-location:before {
+  content: "\e83d";
+}
+
+.icon-wallet:before {
+  content: "\e833";
+}
+
+.icon-history:before {
+  content: "\e67d";
+}
+
+.icon-track:before {
+  content: "\e82e";
+}
+
+.icon-batch-export:before {
+  content: "\e6db";
+}
+
+.icon-playback:before {
+  content: "\e622";
+}
+
+.icon-down:before {
+  content: "\e611";
+}
+
+.icon-backspace:before {
+  content: "\e610";
+}
+
+.icon-search:before {
+  content: "\e625";
+}
+

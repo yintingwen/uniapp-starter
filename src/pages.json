@@ -1,0 +1,230 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^u-(.*)": "./uni_modules/uview-plus/components/u-$1/u-$1.vue",
+      "^co-(.*)": "@components/co-$1/index.vue"
+    }
+  },
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarBackgroundColor": "#fc6303",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "货车定位"
+      }
+    },
+    {
+      "path": "pages/track-query/track-query",
+      "style": {
+        "navigationBarTitleText": "货车轨迹",
+        "navigationBarBackgroundColor": "#fc6303",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/points-mall/points-mall",
+      "style": {
+        "navigationBarTitleText": "积分商城",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/user-center/user-center",
+      "style": {
+        "navigationBarTitleText": "个人中心",
+        "navigationBarBackgroundColor": "#fc6303",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/welfare-center/welfare-center",
+      "style": {
+        "navigationBarTitleText": "福利中心",
+        "navigationBarBackgroundColor": "#fc6303",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/location-query/location-query",
+      "style": {
+        "navigationBarTitleText": "车辆搜索",
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/webview/webview",
+      "style": {
+        "navigationBarTextStyle": "black"
+      }
+    },
+    {
+      "path": "pages/recharge/recharge",
+      "style": {
+        "navigationBarTitleText": "充值票点"
+      }
+    },
+    {
+      "path": "pages/recharge-record/recharge-record",
+      "style": {
+        "navigationBarTitleText": "充值记录"
+      }
+    },
+    {
+      "path": "pages/track-result/track-result"
+    },
+    {
+      "path": "pages/track-record/track-record",
+      "style": {
+        "navigationBarTitleText": "轨迹记录"
+      }
+    },
+    {
+      "path": "pages/location-result/location-result"
+    },
+    {
+      "path": "pages/location-record/location-record",
+      "style": {
+        "navigationBarTitleText": "定位记录"
+      }
+    },
+    {
+      "path": "pages/ticket-detail/ticket-detail",
+      "style": {
+        "navigationBarTitleText": "票点详情",
+        "navigationBarBackgroundColor": "#fc6303",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/ticket-record/ticket-record",
+      "style": {
+        "navigationBarTitleText": "票点明细"
+      }
+    },
+    {
+      "path": "pages/protocol/protocol"
+    }
+  ],
+  "tabBar": {
+    "position": "bottom",
+    "color": "#989898",
+    "selectedColor": "#fc6303",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "货车定位",
+        "iconPath": "static/images/tabbar/location.png",
+        "selectedIconPath": "static/images/tabbar/location@active.png"
+      },
+      {
+        "pagePath": "pages/track-query/track-query",
+        "text": "货车轨迹",
+        "iconPath": "static/images/tabbar/track.png",
+        "selectedIconPath": "static/images/tabbar/track@active.png"
+      },
+      {
+        "pagePath": "pages/points-mall/points-mall",
+        "text": "积分商城",
+        "iconPath": "static/images/tabbar/mall.png",
+        "selectedIconPath": "static/images/tabbar/mall@active.png"
+      },
+      {
+        "pagePath": "pages/welfare-center/welfare-center",
+        "text": "ETC优惠",
+        "iconPath": "static/images/tabbar/etc.png",
+        "selectedIconPath": "static/images/tabbar/etc@active.png"
+      },
+      {
+        "pagePath": "pages/user-center/user-center",
+        "text": "个人中心",
+        "iconPath": "static/images/tabbar/user.png",
+        "selectedIconPath": "static/images/tabbar/user@active.png"
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F8F8F8",
+    "navigationBarTextStyle": "black"
+  },
+  "condition": {
+    "current": 2,
+    "list": [
+      {
+        "name": "定位查询",
+        "path": "pages/location-query/location-query",
+        "query": ""
+      },
+      {
+        "name": "个人中心",
+        "path": "pages/user-center/user-center",
+        "query": ""
+      },
+      {
+        "name": "货车轨迹",
+        "path": "pages/track-query/track-query",
+        "query": ""
+      },
+      {
+        "name": "车辆搜索",
+        "path": "pages/location-query/location-query",
+        "query": ""
+      },
+      {
+        "name": "定位结果",
+        "path": "pages/location-result/location-result",
+        "query": ""
+      },
+      {
+        "name": "定位记录",
+        "path": "pages/location-record/location-record",
+        "query": ""
+      },
+      {
+        "name": "充值票点",
+        "path": "pages/recharge/recharge",
+        "query": ""
+      },
+      {
+        "name": "登录",
+        "path": "pages/login/login",
+        "query": ""
+      },
+      {
+        "name": "轨迹查询结果",
+        "path": "pages/track-result/track-result",
+        "query": ""
+      },
+      {
+        "name": "轨迹记录",
+        "path": "pages/track-record/track-record",
+        "query": ""
+      },
+      {
+        "name": "票点明细",
+        "path": "pages/ticket-record/ticket-record",
+        "query": ""
+      },
+      {
+        "name": "票点详情",
+        "path": "pages/ticket-detail/ticket-detail",
+        "query": ""
+      },
+      {
+        "name": "充值记录",
+        "path": "pages/recharge-record/recharge-record",
+        "query": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "types": [
+      "@dcloudio/types",
+      "mini-types"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "@/*":["src/*"],
+      "@configs/*": ["src/configs/*"],
+      "@components/*": ["src/components/*"],
+      "@apis/*": ["src/apis/*"],
+      "@views/*": ["src/views/*"],
+      "@stores/*": ["src/stores/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@constants/*": ["src/constants/*"],
+    }
+  }
+}
