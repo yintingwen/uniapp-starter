@@ -3,57 +3,57 @@ import uni from '@dcloudio/vite-plugin-uni'
 import commonjs from '@rollup/plugin-commonjs'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
+import exportMerge from 'unplugin-export-merge/vite'
 import { resolve } from "path"
-// https://vitejs.dev/config/
+
 export default defineConfig({
   transpileDependencies: ['uview-plus', 'luch-request'],
-  resolve: { // 这里配置需要注意：Vite新版本resolve配置改为对象形式，如下：
+  resolve: {
     alias: [
       {
         find: '@',
         replacement: resolve(__dirname, "src"),
       },
       {
-        find: '@configs',
-        replacement: resolve(__dirname, "src/configs"),
+        find: '@config',
+        replacement: resolve(__dirname, "src/config"),
       },
       {
-        find: '@components',
-        replacement: resolve(__dirname, "src/components"),
+        find: '@component',
+        replacement: resolve(__dirname, "src/component"),
       },
       {
-        find: '@apis',
-        replacement: resolve(__dirname, "src/apis"),
+        find: '@api',
+        replacement: resolve(__dirname, "src/api"),
       },
       {
-        find: '@views',
-        replacement: resolve(__dirname, "src/views"),
+        find: '@store',
+        replacement: resolve(__dirname, "src/store"),
       },
       {
-        find: '@stores',
-        replacement: resolve(__dirname, "src/stores"),
+        find: '@util',
+        replacement: resolve(__dirname, "src/util"),
       },
       {
-        find: '@utils',
-        replacement: resolve(__dirname, "src/utils"),
+        find: '@hook',
+        replacement: resolve(__dirname, 'src/hook')
       },
       {
-        find: '@hooks',
-        replacement: resolve(__dirname, 'src/hooks')
+        find: '@constant',
+        replacement: resolve(__dirname, 'src/constant')
       },
       {
-        find: '@constants',
-        replacement: resolve(__dirname, 'src/constants')
-      },
-      {
-        find: '@utils',
-        replacement: resolve(__dirname, 'src/utils')
+        find: '@util',
+        replacement: resolve(__dirname, 'src/util')
       }
-    ],
+    ]
   },
   plugins: [
     commonjs(),
     UnoCSS(),
+    exportMerge({
+      dirs: ['helper', 'util']
+    }),
     AutoImport({
       imports:[
         "vue",
@@ -66,9 +66,6 @@ export default defineConfig({
         },
         {
           'query-string': [["default", "qs"]]
-        },
-        {
-          './src/tt/t.js': [['*', 'ttt']]
         }
       ],
       vueTemplate: true,
@@ -82,7 +79,7 @@ export default defineConfig({
         './src/stores',
         './src/utils'
       ],
-      dts:'src/auto-import.d.ts'    // 路径下自动生成文件夹存放全局指令
+      dts:'auto-import.d.ts'
     }),
     uni(),
   ]

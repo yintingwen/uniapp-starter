@@ -16,7 +16,7 @@ export default defineConfig({
     [/^p(\w)-(\d+)$/, (match) => ({ [`padding-${BORDER_SHORT[match[1]]}`]: `${match[2]}rpx` })],
     [/^m-(\d+)$/, (match) => ({ margin: `${match[1]}rpx` })],
     [/^m(\w)-(\d+)$/, (match) => ({ [`margin-${BORDER_SHORT[match[1]]}`]: `${match[2]}rpx` })],
-    [/^box-full$/, () => ({ width: '100%', height: '100%' })],
+    [/^fs-(\d+)$/, (match) => ({ 'font-size': `${match[1]}rpx` })],
   ],
   shortcuts: {
     'flex-center': ['flex', 'items-center', 'justify-center'],
