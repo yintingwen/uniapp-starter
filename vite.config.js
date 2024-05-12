@@ -4,7 +4,7 @@ import commonjs from '@rollup/plugin-commonjs'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import exportMerge from 'unplugin-export-merge/vite'
-import { resolve } from "path"
+import { resolve } from 'path'
 
 export default defineConfig({
   transpileDependencies: ['uview-plus', 'luch-request'],
@@ -12,35 +12,35 @@ export default defineConfig({
     alias: [
       {
         find: '@',
-        replacement: resolve(__dirname, "src"),
+        replacement: resolve(__dirname, 'src'),
       },
       {
         find: '@config',
-        replacement: resolve(__dirname, "src/config"),
+        replacement: resolve(__dirname, 'src/config'),
       },
       {
         find: '@component',
-        replacement: resolve(__dirname, "src/component"),
+        replacement: resolve(__dirname, 'src/component'),
       },
       {
         find: '@api',
-        replacement: resolve(__dirname, "src/api"),
+        replacement: resolve(__dirname, 'src/api'),
       },
       {
         find: '@store',
-        replacement: resolve(__dirname, "src/store"),
+        replacement: resolve(__dirname, 'src/store'),
       },
       {
         find: '@util',
-        replacement: resolve(__dirname, "src/util"),
+        replacement: resolve(__dirname, 'src/util'),
       },
       {
         find: '@hook',
-        replacement: resolve(__dirname, 'src/hook')
+        replacement: resolve(__dirname, 'src/hook'),
       },
       {
         find: '@constant',
-        replacement: resolve(__dirname, 'src/constant')
+        replacement: resolve(__dirname, 'src/constant'),
       },
       {
         find: '@enum',
@@ -48,30 +48,26 @@ export default defineConfig({
       },
       {
         find: '@util',
-        replacement: resolve(__dirname, 'src/util')
-      }
-    ]
+        replacement: resolve(__dirname, 'src/util'),
+      },
+    ],
   },
   plugins: [
     commonjs(),
     UnoCSS(),
     exportMerge({
-      dirs: [
-        './src/apis',
-        './src/helper', 
-        './src/util'
-      ],
+      dirs: ['./src/apis', './src/helper', './src/util'],
     }),
     AutoImport({
-      imports:[
-        "vue",
-        "uni-app",
+      imports: [
+        'vue',
+        'uni-app',
         {
-          'md5': [["default", "md5"]]
+          md5: [['default', 'md5']],
         },
         {
-          'query-string': [["default", "qs"]]
-        }
+          'query-string': [['default', 'qs']],
+        },
       ],
       vueTemplate: true,
       defaultExportByFilename: true,
@@ -84,8 +80,8 @@ export default defineConfig({
         './src/tool',
         './src/export-merge',
       ],
-      dts: true 
+      dts: true,
     }),
     uni(),
-  ]
+  ],
 })

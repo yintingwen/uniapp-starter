@@ -14,7 +14,7 @@
       "@store/*": ["src/store/*"],
       "@hook/*": ["src/hook/*"],
       "@constant/*": ["src/constant/*"],
-      "@enum/*": ["src/enum"],
+      "@enum/*": ["src/enum/*"],
       "@util/*": ["src/util/*"]
     }
   }
