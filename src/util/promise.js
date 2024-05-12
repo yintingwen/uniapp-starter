@@ -9,3 +9,9 @@ export function createPromise () {
   promise.reject = cReject
   return promise
 }
+
+export function wait(time) {
+  const p = createPromise()
+  setTimeout(p.resolve, time)
+  return p
+}

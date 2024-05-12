@@ -26,7 +26,7 @@ const iconStyle = computed(() => {
 })
 
 const imgPath = computed(() => {
-  return `/static/icons/${props.name}.png`
+  return props.name.startsWith('http') ? props.name : `/static/icons/${props.name}.png`
 })
 
 const imageStyle = computed(() => {
@@ -41,5 +41,9 @@ const imageStyle = computed(() => {
 .co-icon-font {
   line-height: 1;
   font-size: 28rpx;
+}
+
+image.co-icon {
+  vertical-align: top;
 }
 </style>

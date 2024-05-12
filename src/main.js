@@ -1,8 +1,8 @@
 import { createSSRApp } from "vue";
 import * as Pinia from 'pinia'
 import App from "./App.vue";
-import initPlugin from "./plugins"
-import initConfig from './configs'
+import initPlugin from "./plugin"
+import initConfig from './config'
 
 import 'uno.css'
 

@@ -43,6 +43,10 @@ export default defineConfig({
         replacement: resolve(__dirname, 'src/constant')
       },
       {
+        find: '@enum',
+        replacement: resolve(__dirname, 'src/enum'),
+      },
+      {
         find: '@util',
         replacement: resolve(__dirname, 'src/util')
       }
@@ -52,15 +56,16 @@ export default defineConfig({
     commonjs(),
     UnoCSS(),
     exportMerge({
-      dirs: ['helper', 'util']
+      dirs: [
+        './src/apis',
+        './src/helper', 
+        './src/util'
+      ],
     }),
     AutoImport({
       imports:[
         "vue",
         "uni-app",
-        {
-          "dayjs": [["default", "dayjs"]]
-        },
         {
           'md5': [["default", "md5"]]
         },
@@ -71,15 +76,15 @@ export default defineConfig({
       vueTemplate: true,
       defaultExportByFilename: true,
       dirs: [
-        './src/apis',
-        './src/configs',
-        './src/constants',
-        './src/helpers',
-        './src/hooks',
-        './src/stores',
-        './src/utils'
+        './src/config',
+        './src/constant',
+        './src/enum',
+        './src/hook',
+        './src/store',
+        './src/tool',
+        './src/export-merge',
       ],
-      dts:'auto-import.d.ts'
+      dts: true 
     }),
     uni(),
   ]
