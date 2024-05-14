@@ -1,24 +1,22 @@
-const http = uni.$u.http
-
-export class UserApi {
-  // 登录
-  static login = (data) => http.post('/user/login', data)
-  // 登出
-  static logout = () => http.get('/user/logout')
-  // 获取用户信息
-  static getUserInfo = () => http.get('/user/getAppUserInfo')
-  // 获取用户权益
-  static getUserBeneficial = () => http.get('/benefit/getUserBenefitInfo')
-  // 获取用户授权车辆
-  static getAuthVehicle = () => http.get('/user/getUserAccurateAuthInfo')
-  // 添加或更新用户车辆授权信息
-  static addAuthVehicle = (data) => http.post('/user/addOrUpdateUserAccurateAuthInfo', data)
-  // 用户搜索的车牌
-  static getHistoryCarNo = (params) => http.get('/user/getHistoryCarNo', { params })
-  // 更新preid
-  static updateZjxlPreId = (params) => http.get('/user/updateZjxlUserId', { params })
-  // 票点使用明细
-  static ticketRecord = (data) => http.post('/benefit/ticketRecordQuery', data)
-  // 充值记录
-  static rechargeRecord = (data) => http.post('/benefit/rechargeRecord', data)
-}
+// 注册
+export const register = (data) => http.post('/regist', data)
+// 登录
+export const login = (data) => http.post('/login', data)
+// 登出
+export const logout = () => http.get('/logout')
+// 修改密码
+export const passwordChange = (data) => http.post('/changePassword', data)
+// 修改昵称
+export const nicknameChange = (data) => http.post('/changeNickname', data)
+// 获取用户信息
+export const getUserInfo = () => http.get('/userinfo')
+// 绑定ws
+export const bindWebsocket = (params) => http.get('/setFd', { params })
+// 开启/关闭抢单
+export const openGrabOrder = (open) => http.get('/setopen', { params: { open } })
+// 抢单
+export const grapOrder = (order_id) => http.post('/grab', { order_id })
+// 确认收款
+export const comfirePay = (order_id) => http.get('/comfirePay', { params: { order_id } })
+// 团队列表
+export const downsList = () => http.get('/downs')

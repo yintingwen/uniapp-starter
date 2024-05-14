@@ -54,13 +54,7 @@
     "setting": {
       "urlCheck": false
     },
-    "usingComponents": true,
-    "plugins": {
-      "truck-permission-plugin": {
-        "version": "3.0.3",
-        "provider": "wx7c2f0278c182600a"
-      }
-    }
+    "usingComponents": true
   },
   "mp-alipay": {
     "usingComponents": true

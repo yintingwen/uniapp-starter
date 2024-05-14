@@ -4,7 +4,7 @@ const http = new Request()
 
 http.setConfig(() => {
   return {
-    baseURL: import.meta.env.VITE_HTTP_HOST + import.meta.env.VITE_HTTP_PATH
+    baseURL: import.meta.env.VITE_HTTP_URL
   }
 })
 

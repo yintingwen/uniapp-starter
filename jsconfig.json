@@ -13,6 +13,7 @@
       "@view/*": ["src/view/*"],
       "@store/*": ["src/store/*"],
       "@hook/*": ["src/hook/*"],
+      "@lib/*": ["src/lib/*"],
       "@constant/*": ["src/constant/*"],
       "@enum/*": ["src/enum/*"],
       "@util/*": ["src/util/*"]

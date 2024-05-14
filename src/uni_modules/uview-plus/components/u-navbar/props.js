@@ -51,6 +51,10 @@ export default {
 			type: String,
 			default: defprops.navbar.bgColor
 		},
+    bgImage: {
+      type: String,
+      default: ''
+    },
 		// 标题的宽度
 		titleWidth: {
 			type: [String, Number],

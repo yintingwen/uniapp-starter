@@ -2,16 +2,12 @@ import { defineStore } from "pinia";
 
 export const useSystemStore = defineStore('system',{
   state: () => ({
-    systemInfo: null
+    systemInfo: uni.getSystemInfoSync(),
+    dataSource: dataSourceEnum.XMYX
   }),
-  computed: {
+  getters: {
     devicePixelRatio (state) {
       return state.systemInfo.devicePixelRatio 
-    }
-  },
-  actions: {
-    getSystemInfo () {
-        this.systemInfo = uni.getSystemInfoSync()
     }
   }
 })

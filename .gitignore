@@ -2,3 +2,4 @@ node_modules
 dist
 .hbuilderx
 **/auto-import.d.ts
+export-merge

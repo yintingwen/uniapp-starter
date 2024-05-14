@@ -11,6 +11,7 @@
 			<u-status-bar
 				v-if="safeAreaInsetTop"
 				:bgColor="bgColor"
+        :bgImage="bgImage"
 			></u-status-bar>
 			<view
 				class="u-navbar__content"
@@ -18,6 +19,7 @@
 				:style="{
 					height: $u.addUnit(height),
 					backgroundColor: bgColor,
+          backgroundImage: bgImage
 				}"
 			>
 				<view

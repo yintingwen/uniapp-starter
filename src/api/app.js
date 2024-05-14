@@ -1,0 +1,1 @@
+export const getNotices = () => http.get('/notices')

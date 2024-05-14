@@ -39,6 +39,10 @@ export default defineConfig({
         replacement: resolve(__dirname, 'src/hook'),
       },
       {
+        find: '@lib',
+        replacement: resolve(__dirname, 'src/lib')
+      },
+      {
         find: '@constant',
         replacement: resolve(__dirname, 'src/constant'),
       },
@@ -56,7 +60,7 @@ export default defineConfig({
     commonjs(),
     UnoCSS(),
     exportMerge({
-      dirs: ['./src/apis', './src/helper', './src/util'],
+      dirs: ['./src/api', './src/helper', './src/util'],
     }),
     AutoImport({
       imports: [
