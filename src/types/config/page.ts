@@ -10,5 +10,7 @@ export interface PageConfig {
   navbarRightIcon: String; // 右侧图标
   fillType: typeof coPageFillTypeEnum; // 页面填充方式
   bgColor: string;
+  bgImage: string;
+  checkLogin: boolean;
   pages: Record<string, PageConfig>
 }

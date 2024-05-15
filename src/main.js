@@ -1,20 +1,18 @@
-import { createSSRApp } from "vue";
+import { createSSRApp } from 'vue'
 import * as Pinia from 'pinia'
-import App from "./App.vue";
-import initPlugin from "./plugin"
-import initConfig from './config'
+import App from './App.vue'
+import { setupPlugin } from './plugin'
 
 import 'uno.css'
 
 export function createApp() {
-	const app = createSSRApp(App);
-  app.use(Pinia.createPinia())
+  const app = createSSRApp(App)
   
-  initPlugin(app)
-  initConfig(app)
+  app.use(Pinia.createPinia())
+  app.use(setupPlugin)
 
-	return {
-		app,
-    Pinia
-	};
+  return {
+    app,
+    Pinia,
+  }
 }

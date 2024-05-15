@@ -38,7 +38,7 @@ export function useMapGridLocation(location) {
           id: 1,
           longitude: value.longitude,
           latitude: value.latitude,
-          iconPath: IMAGE_MAP_CAR,
+          iconPath: '',
           height: 1,
           width: 1,
           customCallout: {
@@ -85,7 +85,7 @@ export function useMapPreciseLocation(location) {
         id: 2,
         longitude: value.longitude,
         latitude: value.latitude,
-        iconPath: IMAGE_MAP_CAR,
+        iconPath: '',
         width: 70,
         height: 70,
         rotate: Number(data.drc),
@@ -334,7 +334,7 @@ export function useMapPreciseTrack(trackArray, initSpeed = 1, mapId) {
       carPoint = {
         ...marker,
         id: trackArray.length + 1,
-        iconPath: IMAGE_MAP_CAR,
+        iconPath: '',
         width: 50,
         height: 50,
         rotate: Number(item.agl),

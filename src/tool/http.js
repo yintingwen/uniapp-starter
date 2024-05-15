@@ -32,7 +32,7 @@ http.interceptors.response.use(
       return Promise.reject(createError('服务器或网络异常'))
     }
 
-    if (res.code === 0) return res.data
+    if (res.code === httpCodeEnum.OK) return res.data
     uni.hideLoading()
     // token失效，并且不是刷新函数
     if (res.code === httpCodeEnum.T0KEN_INVALID) {

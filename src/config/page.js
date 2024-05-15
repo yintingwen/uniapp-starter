@@ -1,7 +1,16 @@
 // co-page统一配置
-export const pageConfig = definePageConfig({
+/**
+ * @type { import('../types/config/page.ts').PageConfig }
+ */
+export const pageConfig = {
   // navbar: true,
   // navbarTitleColor: '#efd780',
   // navbarBgImage: 'linear-gradient(to right, #333, #000)',
-  // fillType: coPageFillTypeEnum.body
-})
+  // fillType: coPageFillTypeEnum.BODY
+  checkLogin: false,
+  pages: {
+    "/pages/index/index": {
+      checkLogin: false
+    }
+  }
+}

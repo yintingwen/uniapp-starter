@@ -2,14 +2,12 @@
 import IndexTicketIcon from './components/IndexTicketIcon'
 import IndexShareIcon from './components/IndexShareIcon'
 import IndexNewcomerIcon from './components/IndexNewcomerIcon'
-import { appConfig } from '@config/app'
 import { mockGridData, mockData } from './location'
 
 const userStore = useUserStore()
-const systemStore = useSystemStore()
 const mapGridLocation = useMapGridLocation(mockGridData)
 const mapPreciseLocation = useMapPreciseLocation(mockData)
-const searchType = ref(+(systemStore.dataSource !== dataSourceEnum.ZJXL)) // 0: 网格 1: 精准
+const searchType = ref(+(1)) // 0: 网格 1: 精准
 const mapPanelShow = ref(true)
 const showWxCodePopup = ref(false)
 const showNotice = ref(false)
@@ -78,8 +76,13 @@ function onClickInviteBanner() {
           />
         </swiper-item>
       </swiper>
+      <view style="font-size: 40rpx">
+        12312
+        <co-icon :type="coIconTypeEnum.IMAGE" size="50" name="https://cdn.uviewui.com/uview/example/button.png"/>
+
+      </view>
       <!-- 中间地图容器 -->
-      <view class="map-container">
+      <!-- <view class="map-container">
         <co-map-location
           :location="useMapLocation"
           :panelShow="mapPanelShow"
@@ -95,10 +98,10 @@ function onClickInviteBanner() {
             />
           </template>
         </co-map-location>
-      </view>
+      </view> -->
       <!-- 搜索类型切换 -->
       <view class="type-switch">
-        <co-type-switch
+        <!-- <co-type-switch
           v-model="searchType"
           textColor="#656565"
           activeTextColor="#ffffff"
@@ -115,10 +118,9 @@ function onClickInviteBanner() {
               <text class="switch-input-text">请输入车牌号</text>
             </view>
           </view>
-        </co-type-switch>
+        </co-type-switch> -->
       </view>
     </view>
-    <co-wechat-code :show="showWxCodePopup" @close="showWxCodePopup = false" />
     <u-popup
       mode="center"
       bgColor="transparent"
@@ -191,7 +193,6 @@ function onClickInviteBanner() {
       </view>
     </u-modal>
   </co-page>
-  <co-service-code :show="showServicePopup" @close="showServicePopup = false" />
 </template>
 
 <style lang="scss">

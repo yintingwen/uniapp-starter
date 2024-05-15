@@ -75,7 +75,7 @@ export const useUserStore = defineStore('user', {
         await userApi.updateZjxlPreId({ zjxlAccurateUserId: preid })
       } else {
         await userApi.updateZjxlPreId({ zjxlSpeedUserId: preid })
-        uni.removeStorageSync(ZJXL_GRID_AUTH_STORAGE)
+        uni.removeStorageSync('ZJXL_GRID_AUTH_STORAGE')
       }
       await this.getUserInfo()
     },

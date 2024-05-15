@@ -3,7 +3,7 @@
     "autoscan": true,
     "custom": {
       "^u-(.*)": "./uni_modules/uview-plus/components/u-$1/u-$1.vue",
-      "^co-(.*)": "@component/co-$1/index.vue"
+      "^co-(.*)": "@component/co-$1/co-$1.vue"
     }
   },
   "pages": [
